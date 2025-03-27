@@ -20,6 +20,12 @@ services:
     command: ["start", "--all", "--config", "/root/ngrok.yml"]
     volumes:
       - ./ngrok.yml:/root/ngrok.yml
+    environment:
+      NGROK_AUTHTOKEN: 2CTXxFpr7mpWF8w5HK6MbSRDjTt_5RjhWLDvYywN4qGG9CcQH
+    command: >
+      bash -c "
+        ngrok http --domain=absolutely-accepted-hedgehog.ngrok-free.app 80
+      "
     restart: unless-stopped
     ports:
       - 4040:4040
