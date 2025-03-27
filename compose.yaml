@@ -20,7 +20,6 @@ services:
     command: ["start", "--all", "--config", "/root/ngrok.yml"]
     volumes:
       - ./ngrok.yml:/root/ngrok.yml
-    networks: ['demo']
     restart: unless-stopped
     ports:
       - 4040:4040
