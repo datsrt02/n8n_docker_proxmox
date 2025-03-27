@@ -17,9 +17,9 @@ services:
   ngrok:
     image: ngrok/ngrok:latest
     hostname: ngrok
-    command: ["start", "--all", "--config", "/etc/ngrok.yml"]
+    command: ["start", "--all", "--config", "/root/ngrok.yml"]
     volumes:
-      - ./ngrok.yml:/etc/ngrok.yml
+      - ./ngrok.yml:/root/ngrok.yml
     networks: ['demo']
     restart: unless-stopped
     ports:
