@@ -3,7 +3,6 @@ echo "--------- 🟢 Start Docker compose down  -----------"
 sudo -E docker compose down
 echo "--------- 🔴 Finish Docker compose down -----------"
 echo "--------- 🟢 Start Ngrok setup -----------"
-wget -O https://raw.githubusercontent.com/datsrt02/n8n_docker_proxmox/refs/heads/main/ngrok.yml ngrok.yml
 sudo apt install -y jq
 echo "🔴🔴🔴 Please wait Ngrok to start...."
 sleep 8
