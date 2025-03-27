@@ -14,7 +14,7 @@ sudo chown -R 1000:1000 n8n
 sudo chmod -R 755 n8n
 echo "--------- 🔴 Finish creating folder -----------"
 echo "--------- 🟢 Start docker compose up  -----------"
-wget -O https://raw.githubusercontent.com/datsrt02/n8n_docker_proxmox/refs/heads/main/ngrok.yml ngrok.yml
+wget https://raw.githubusercontent.com/datsrt02/n8n_docker_proxmox/refs/heads/main/ngrok.yml  - 0 ngrok.yml
 wget https://raw.githubusercontent.com/datsrt02/n8n_docker_proxmox/refs/heads/main/compose.yaml -O compose.yaml
 export EXTERNAL_IP=http://"$(hostname -I | cut -f1 -d' ')"
 sudo -E docker compose up -d
