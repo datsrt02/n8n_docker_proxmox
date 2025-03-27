@@ -16,6 +16,5 @@ echo "--------- 🔴 Finish creating folder -----------"
 echo "--------- 🟢 Start docker compose up  -----------"
 wget https://raw.githubusercontent.com/datsrt02/n8n_docker_proxmox/refs/heads/main/compose.yaml -O compose.yaml
 export EXTERNAL_IP=http://"$(hostname -I | cut -f1 -d' ')"
-wget https://raw.githubusercontent.com/datsrt02/n8n_docker_proxmox/refs/heads/main/ngrok.yml -O ngrok.yml
 sudo -E docker compose up -d
 echo "--------- 🔴 Finish! Wait a few minutes and test in browser at url $EXTERNAL_IP for n8n UI -----------"
