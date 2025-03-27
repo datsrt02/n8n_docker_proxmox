@@ -17,9 +17,8 @@ services:
   ngrok:
     image: ngrok/ngrok:latest
     hostname: ngrok
-    command: ["start", "--all", "--config", "/root/ngrok.yml"]
     volumes:
-      - ./ngrok.yml:/root/ngrok.yml
+      - .:/root/
     environment:
       NGROK_AUTHTOKEN: 2CTXxFpr7mpWF8w5HK6MbSRDjTt_5RjhWLDvYywN4qGG9CcQH
     command: >
