@@ -13,3 +13,14 @@ services:
     volumes:
       - /root/n8n:/home/node/.n8n
     restart: always
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    hostname: ngrok
+    command: ["start", "--all", "--config", "/etc/ngrok.yml"]
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    networks: ['demo']
+    restart: unless-stopped
+    ports:
+      - 4040:4040
