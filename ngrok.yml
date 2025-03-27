@@ -1,0 +1,9 @@
+version: "3"
+agent:
+    authtoken: 2CTXxFpr7mpWF8w5HK6MbSRDjTt_5RjhWLDvYywN4qGG9CcQH
+
+tunnels:
+  n8n:
+    proto: http
+    addr: localhost:5678
+    domain: absolutely-accepted-hedgehog.ngrok-free.app
